@@ -83,7 +83,7 @@ $$\dot{\mathbf{x}} = A \mathbf{x} + B_c \mathbf{u}$$
 $$\mathbf{x} = [X_b^h, \dot{X}_b^h, \phi, \dot{\phi}, \theta_l, \dot{\theta}_l, \theta_r, \dot{\theta}_r, \theta_b, \dot{\theta}_b]^T$$
 
 **控制向量** $\mathbf{u}$ (4维):
-$$\mathbf{u} = [T_{wr}, T_{wl}, T_r, T_l]^T$$
+$$\mathbf{u} = [T_{r\to b}, T_{l \to b}, T_{wr \to r}, T_{wl \to l}]^T$$
 
 - $T_{wr}$ — 右轮电机力矩
 - $T_{wl}$ — 左轮电机力矩
