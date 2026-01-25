@@ -18,22 +18,10 @@
 2026公式推导/
 ├── README.md                    # 本文件
 ├── 推导-v2.md                   # 完整动力学推导文档
-│
-├── step1_define_and_derive.m    # Step 1: 定义符号变量，建立动力学方程
-├── step1_results.mat            # Step 1 输出结果
-│
-├── simplify_dynamics.m          # 动力学方程化简（旧版）
 ├── simplify_dynamics_v2.m       # 动力学方程化简（新坐标系）
 ├── dynamics_v2.mat              # 化简后的动力学方程
-│
-├── apply_kinematics_v2.m        # Step 2: 代入运动学约束，提取M、B、g矩阵
+├── apply_kinematics_v2.m        # 代入运动学约束，提取M、B、g矩阵
 ├── dynamics_new_coords.mat      # M、B、g矩阵结果
-│
-├── linearize_system.m           # 线性化脚本（初版）
-├── linearize_system_v2.m        # 线性化脚本（优化版，已合并至compute_lqr_v2.m）
-├── linearized_system.mat        # 线性化A、B矩阵结果
-│
-├── compute_lqr.m                # LQR控制器计算（旧版，不含平衡点求解）
 ├── compute_lqr_v2.m             # ★ 主脚本：平衡点求解 + 线性化 + LQR控制器
 ├── lqr_results.mat              # LQR计算结果（单腿长）
 └── lqr_fitting_results.mat      # LQR拟合结果（变腿长）
