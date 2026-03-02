@@ -677,11 +677,13 @@ if enable_fitting
                 B_fit_num(6,:) = B_dyn_fit(3,:); B_fit_num(8,:) = B_dyn_fit(4,:);
                 B_fit_num(10,:) = B_dyn_fit(5,:);
                 
+                %因为matlab是按照列优先展开，这里转置后再展开可以切换为行优先
                 K_fit = lqr(A_fit_num, B_fit_num, lqr_Q, lqr_R);
+                K_fit_trans = K_fit';
                 
                 K_sample_2d(idx, 1) = l_l_fit;
                 K_sample_2d(idx, 2) = l_r_fit;
-                K_sample_2d(idx, 3:42) = K_fit(:)';
+                K_sample_2d(idx, 3:42) = K_fit_trans(:)';
                 
                 % 存储平衡点偏移量
                 offset_sample_2d(idx, 1) = l_l_fit;
